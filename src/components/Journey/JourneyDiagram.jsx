@@ -1,268 +1,233 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Circle } from 'lucide-react';
+import { 
+  Music, 
+  MapPin, 
+  Languages, 
+  Globe, 
+  Eye, 
+  BookOpen, 
+  Search, 
+  ScanEye, 
+  Sparkles 
+} from 'lucide-react';
 
-const diagramNodes = [
-  {
-    id: 'start',
-    label: 'Casual Listening',
-    x: 50,
-    y: 10,
-    color: '#6b7280',
-    description: 'Unstructured engagement with music',
+const processNodes = {
+  start: {
+    title: "Casual Listening",
+    icon: Music,
+    color: "bg-slate-100 text-slate-600 border-slate-200",
+    description: "Unstructured engagement with music."
   },
-  {
-    id: 'berlin',
-    label: 'Berlin Experience',
-    x: 50,
-    y: 30,
-    color: '#c9a227',
-    description: 'Spontaneous concert attendance',
-    isKey: true,
+  trigger: {
+    title: "Berlin Experience",
+    icon: MapPin,
+    color: "bg-[#e8e3d9] text-[#c9a227] border-[#c9a227]/30",
+    description: "The spark: Spontaneous concert attendance."
   },
-  {
-    id: 'language',
-    label: 'Language Barrier',
-    x: 25,
-    y: 50,
-    color: '#ef4444',
-    description: 'Constraint: German lyrics',
-  },
-  {
-    id: 'cultural',
-    label: 'Cultural Distance',
-    x: 50,
-    y: 50,
-    color: '#ef4444',
-    description: 'Constraint: Historical context',
-  },
-  {
-    id: 'visual',
-    label: 'Visual Ambiguity',
-    x: 75,
-    y: 50,
-    color: '#ef4444',
-    description: 'Constraint: Provocative imagery',
-  },
-  {
-    id: 'translation',
-    label: 'Translation Tools',
-    x: 25,
-    y: 70,
-    color: '#8fbc8f',
-    description: 'Tool: Annotation & comparison',
-  },
-  {
-    id: 'research',
-    label: 'Cultural Research',
-    x: 50,
-    y: 70,
-    color: '#8fbc8f',
-    description: 'Tool: Context seeking',
-  },
-  {
-    id: 'multimodal',
-    label: 'Visual Analysis',
-    x: 75,
-    y: 70,
-    color: '#8fbc8f',
-    description: 'Tool: Multimodal reading',
-  },
-  {
-    id: 'literacy',
-    label: 'Music Literacy',
-    x: 50,
-    y: 90,
-    color: '#9333ea',
-    description: 'Critical interpretation skills',
-    isKey: true,
-  },
-];
+  outcome: {
+    title: "Music Literacy",
+    icon: Sparkles,
+    color: "bg-purple-50 text-purple-700 border-purple-200",
+    description: "Critical interpretation skills & cultural awareness."
+  }
+};
 
-const connections = [
-  { from: 'start', to: 'berlin' },
-  { from: 'berlin', to: 'language' },
-  { from: 'berlin', to: 'cultural' },
-  { from: 'berlin', to: 'visual' },
-  { from: 'language', to: 'translation' },
-  { from: 'cultural', to: 'research' },
-  { from: 'visual', to: 'multimodal' },
-  { from: 'translation', to: 'literacy' },
-  { from: 'research', to: 'literacy' },
-  { from: 'multimodal', to: 'literacy' },
+const transformations = [
+  {
+    id: 'lang',
+    constraint: { title: "Language Barrier", icon: Languages },
+    tool: { title: "Translation Tools", icon: BookOpen },
+    accent: "red"
+  },
+  {
+    id: 'cult',
+    constraint: { title: "Cultural Distance", icon: Globe },
+    tool: { title: "Cultural Research", icon: Search },
+    accent: "orange"
+  },
+  {
+    id: 'vis',
+    constraint: { title: "Visual Ambiguity", icon: Eye },
+    tool: { title: "Visual Analysis", icon: ScanEye },
+    accent: "blue"
+  }
 ];
 
 export default function JourneyDiagram() {
-  const [hoveredNode, setHoveredNode] = useState(null);
-
-  const getNodePosition = (node) => ({
-    left: `${node.x}%`,
-    top: `${node.y}%`,
-  });
-
   return (
-    <section className="py-24 md:py-32 bg-gradient-to-br from-[#faf8f5] to-white">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-[#c9a227] text-sm tracking-[0.3em] uppercase mb-4">
-            Visual Framework
-          </p>
-          <h2 className="text-3xl md:text-5xl font-light text-[#1a1a2e] mb-6">
-            Literacy Development Diagram
-          </h2>
-          <p className="text-[#1a1a2e]/60 max-w-2xl mx-auto">
+          <p className="text-[#c9a227] text-sm tracking-[0.3em] uppercase mb-4">The Framework</p>
+          <h2 className="text-3xl md:text-4xl font-light text-[#1a1a2e]">Literacy Development Model</h2>
+          <p className="text-[#1a1a2e]/60 mt-4 max-w-2xl mx-auto">
             How constraints transformed into tools and literacy
           </p>
-          <div className="w-16 h-px bg-[#1a1a2e]/20 mx-auto mt-8" />
         </motion.div>
 
-        {/* Diagram */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative h-[600px] bg-white rounded-lg shadow-xl border border-[#1a1a2e]/5 p-8"
-        >
-          {/* SVG for connections */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-            {connections.map((conn, idx) => {
-              const fromNode = diagramNodes.find(n => n.id === conn.from);
-              const toNode = diagramNodes.find(n => n.id === conn.to);
+        {/* Diagram Layout */}
+        <div className="flex flex-col items-center relative z-10">
+            
+            {/* 1. TOP SECTION (Start -> Berlin) */}
+            <div className="flex flex-col items-center">
+              <NodeCard node={processNodes.start} />
               
-              return (
-                <motion.line
-                  key={`${conn.from}-${conn.to}`}
-                  x1={`${fromNode.x}%`}
-                  y1={`${fromNode.y}%`}
-                  x2={`${toNode.x}%`}
-                  y2={`${toNode.y}%`}
-                  stroke="#1a1a2e"
-                  strokeWidth="2"
-                  strokeOpacity="0.2"
-                  strokeDasharray="5,5"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  transition={{ duration: 1, delay: idx * 0.05 }}
-                  viewport={{ once: true }}
-                />
-              );
-            })}
-          </svg>
+              {/* Vertical Line */}
+              <motion.div 
+                initial={{ height: 0 }}
+                whileInView={{ height: 64 }}
+                transition={{ duration: 1 }}
+                className="w-0.5 bg-slate-200"
+              />
+              
+              <NodeCard node={processNodes.trigger} isKey={true} />
+            </div>
 
-          {/* Nodes */}
-          {diagramNodes.map((node, index) => (
-            <motion.div
-              key={node.id}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="absolute"
-              style={{
-                ...getNodePosition(node),
-                transform: 'translate(-50%, -50%)',
-                zIndex: hoveredNode === node.id ? 20 : 10,
-              }}
-              onMouseEnter={() => setHoveredNode(node.id)}
-              onMouseLeave={() => setHoveredNode(null)}
-            >
-              {/* Node Circle */}
-              <motion.div
-                animate={{
-                  scale: hoveredNode === node.id ? 1.1 : 1,
-                }}
-                className="relative"
-              >
-                {/* Glow effect for key nodes */}
-                {node.isKey && (
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.3, 1],
-                      opacity: [0.3, 0, 0.3],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    className="absolute inset-0 rounded-full -m-4"
-                    style={{ backgroundColor: node.color }}
-                  />
-                )}
+            {/* CONNECTOR 1: Branching Curves (Hidden on mobile) */}
+            <div className="w-full max-w-5xl h-24 relative hidden md:block">
+               {/* viewBox="0 0 300 100" maps to the 3 columns:
+                  - Left Column Center: x = 50
+                  - Middle Column Center: x = 150
+                  - Right Column Center: x = 250
+                  - Start Point (Berlin): x = 150
+               */}
+               <svg className="w-full h-full" viewBox="0 0 300 100" preserveAspectRatio="none">
+                 {/* Left Curve: 150 -> 50 */}
+                 <motion.path 
+                   d="M 150 0 C 150 50, 50 50, 50 100"
+                   fill="none" stroke="#e2e8f0" strokeWidth="2"
+                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1 }}
+                 />
+                 {/* Center Line: 150 -> 150 */}
+                 <motion.path 
+                   d="M 150 0 L 150 100"
+                   fill="none" stroke="#e2e8f0" strokeWidth="2"
+                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1 }}
+                 />
+                 {/* Right Curve: 150 -> 250 */}
+                 <motion.path 
+                   d="M 150 0 C 150 50, 250 50, 250 100"
+                   fill="none" stroke="#e2e8f0" strokeWidth="2"
+                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1 }}
+                 />
+               </svg>
+            </div>
+            {/* Mobile-only connector */}
+            <div className="h-12 w-0.5 bg-slate-200 md:hidden" />
 
-                <div
-                  className={`${node.isKey ? 'w-24 h-24' : 'w-20 h-20'} rounded-full flex items-center justify-center shadow-lg border-4 border-white transition-all cursor-pointer`}
-                  style={{ backgroundColor: node.color }}
-                >
-                  <Circle className="text-white" size={node.isKey ? 32 : 24} />
-                </div>
-              </motion.div>
-
-              {/* Label */}
-              <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 text-center w-32">
-                <p className={`${node.isKey ? 'font-medium text-base' : 'text-sm'} text-[#1a1a2e] leading-tight`}>
-                  {node.label}
-                </p>
-                
-                {/* Description on hover */}
-                {hoveredNode === node.id && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-xs text-[#1a1a2e]/60 mt-2 italic"
+            {/* 2. MIDDLE SECTION (The 3 Columns) */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 w-full max-w-5xl">
+              {transformations.map((t, idx) => (
+                <div key={t.id} className="flex flex-col items-center relative">
+                  
+                  {/* Constraint Card */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-sm bg-white border border-red-100 p-6 rounded-xl shadow-sm text-center relative group hover:shadow-md transition-shadow z-20"
                   >
-                    {node.description}
-                  </motion.p>
-                )}
-              </div>
-            </motion.div>
-          ))}
+                    <div className="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-3 text-red-500 group-hover:scale-110 transition-transform">
+                      <t.constraint.icon size={20} />
+                    </div>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-red-400 mb-1 block">Constraint</span>
+                    <h3 className="text-slate-800 font-medium">{t.constraint.title}</h3>
+                  </motion.div>
 
-          {/* Legend */}
-          <div className="absolute bottom-4 left-4 right-4 flex flex-wrap justify-center gap-4 text-xs">
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-2 rounded shadow-sm">
-              <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#c9a227' }} />
-              <span className="text-[#1a1a2e]/70">Key Moment</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-2 rounded shadow-sm">
-              <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#ef4444' }} />
-              <span className="text-[#1a1a2e]/70">Constraint</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-2 rounded shadow-sm">
-              <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#8fbc8f' }} />
-              <span className="text-[#1a1a2e]/70">Tool Developed</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-2 rounded shadow-sm">
-              <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#9333ea' }} />
-              <span className="text-[#1a1a2e]/70">Outcome</span>
-            </div>
-          </div>
-        </motion.div>
+                  {/* Arrow Down */}
+                  <div className="h-12 flex items-center justify-center text-slate-300">
+                    ↓
+                  </div>
 
-        {/* Explanation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center max-w-3xl mx-auto"
-        >
-          <p className="text-[#1a1a2e]/70 leading-relaxed">
-            This diagram visualizes how a <span className="text-[#c9a227] font-medium">single transformative experience</span> led 
-            to multiple <span className="text-red-500 font-medium">constraints</span>, which in turn motivated the development 
-            of specific <span className="text-[#8fbc8f] font-medium">literacy tools</span>, ultimately resulting in 
-            a comprehensive <span className="text-purple-600 font-medium">music literacy</span>. Hover over each node to learn more.
-          </p>
-        </motion.div>
+                  {/* Tool Card */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: (idx * 0.2) + 0.2 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-sm bg-slate-50 border border-green-100 p-6 rounded-xl shadow-sm text-center relative group hover:shadow-md transition-shadow z-20"
+                  >
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 text-green-600 group-hover:scale-110 transition-transform">
+                      <t.tool.icon size={20} />
+                    </div>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-green-600 mb-1 block">Tool Developed</span>
+                    <h3 className="text-slate-800 font-medium">{t.tool.title}</h3>
+                  </motion.div>
+
+                </div>
+              ))}
+            </div>
+
+            {/* CONNECTOR 2: Merging Curves (Hidden on mobile) */}
+            <div className="w-full max-w-5xl h-24 relative hidden md:block">
+               {/* Merging 50, 150, 250 back to center 150
+               */}
+               <svg className="w-full h-full" viewBox="0 0 300 100" preserveAspectRatio="none">
+                 {/* Left Merge: 50 -> 150 */}
+                 <motion.path 
+                   d="M 50 0 C 50 50, 150 50, 150 100"
+                   fill="none" stroke="#e2e8f0" strokeWidth="2"
+                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1, delay: 0.5 }}
+                 />
+                 {/* Center Line: 150 -> 150 */}
+                 <motion.path 
+                   d="M 150 0 L 150 100"
+                   fill="none" stroke="#e2e8f0" strokeWidth="2"
+                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1, delay: 0.5 }}
+                 />
+                 {/* Right Merge: 250 -> 150 */}
+                 <motion.path 
+                   d="M 250 0 C 250 50, 150 50, 150 100"
+                   fill="none" stroke="#e2e8f0" strokeWidth="2"
+                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 1, delay: 0.5 }}
+                 />
+               </svg>
+            </div>
+            {/* Mobile-only connector */}
+            <div className="h-12 w-0.5 bg-slate-200 md:hidden" />
+
+            {/* 3. BOTTOM SECTION (Outcome) */}
+            <div className="mt-0">
+              <NodeCard node={processNodes.outcome} isOutcome={true} />
+            </div>
+
+        </div>
       </div>
     </section>
+  );
+}
+
+function NodeCard({ node, isKey = false, isOutcome = false }) {
+  return (
+    <motion.div 
+      initial={{ scale: 0.9, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: true }}
+      className={`
+        relative px-8 py-6 rounded-2xl border text-center shadow-sm w-64 md:w-80 z-20 bg-white
+        ${node.color}
+        ${isKey ? 'ring-4 ring-[#e8e3d9]/50 shadow-md' : ''}
+        ${isOutcome ? 'ring-4 ring-purple-50 shadow-purple-100' : ''}
+      `}
+    >
+      <div className="flex flex-col items-center gap-3">
+        <div className={`p-3 rounded-full bg-white/80 shadow-sm`}>
+          <node.icon size={isKey || isOutcome ? 24 : 20} />
+        </div>
+        <div>
+          <h3 className={`font-semibold text-[#1a1a2e] ${isOutcome ? 'text-xl' : 'text-lg'}`}>{node.title}</h3>
+          <p className="text-xs opacity-70 mt-2 leading-relaxed">{node.description}</p>
+        </div>
+      </div>
+    </motion.div>
   );
 }
