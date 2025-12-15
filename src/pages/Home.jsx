@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import HeroSection from '@/components/journey/HeroSection';
-import AboutSection from '@/components/journey/AboutSection';
-import InteractiveTimeline from '@/components/journey/InteractiveTimeline';
-import BerlinMap from '@/components/journey/BerlinMap';
-import ArtifactsSection from '@/components/journey/ArtifactsSection';
-import JourneyDiagram from '@/components/journey/JourneyDiagram';
-import ConstraintsSection from '@/components/journey/ConstraintsSection';
-import LessonsSection from '@/components/journey/LessonsSection';
-import RammsteinGallery from '@/components/journey/RammsteinGallery';
-import Navigation from '@/components/journey/Navigation';
+import HeroSection from '@/components/Journey/HeroSection';
+import AboutSection from '@/components/Journey/AboutSection';
+import InteractiveTimeline from '@/components/Journey/InteractiveTimeline';
+import BerlinMap from '@/components/Journey/BerlinMap';
+import ArtifactsSection from '@/components/Journey/ArtifactsSection';
+import JourneyDiagram from '@/components/Journey/JourneyDiagram';
+import ConstraintsSection from '@/components/Journey/ConstraintsSection';
+import LessonsSection from '@/components/Journey/LessonsSection';
+import RammsteinGallery from '@/components/Journey/RammsteinGallery';
+import Navigation from '@/components/Journey/Navigation';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('hero');
