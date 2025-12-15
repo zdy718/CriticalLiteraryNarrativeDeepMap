@@ -12,7 +12,7 @@ const mapLocations = [
     category: 'Arrival',
     image: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=800&q=80',
     description: 'My first impression of Berlin. The historical weight of the city was immediately apparent.',
-    significance: 'This landmark symbolized the cultural depth I was about to encounter—a city where history, art, and identity are deeply intertwined.',
+    significance: 'This landmark symbolized the cultural depth I was about to encounter, a city where history, art, and identity are deeply intertwined.',
   },
   {
     id: 2,

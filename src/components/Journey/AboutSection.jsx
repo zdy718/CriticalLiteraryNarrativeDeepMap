@@ -35,7 +35,7 @@ export default function AboutSection() {
           >
             <div className="aspect-[4/5] bg-[#1a1a2e]/5 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80"
+                src="/images/rammsteinmembers.jpg"
                 alt="Concert and live music"
                 className="w-full h-full object-cover"
               />
@@ -67,7 +67,7 @@ export default function AboutSection() {
               </p>
               
               <p>
-                However, my earlier experiences still laid the groundwork—I grew up around diverse 
+                However, my earlier experiences still laid the groundwork,I grew up around diverse 
                 genres and was always curious about how different people interpreted the same things 
                 differently. This curiosity was present, but not fully developed into a literacy.
               </p>

@@ -13,7 +13,7 @@ const constraints = [
   {
     id: 2,
     constraint: 'Cultural Distance',
-    description: 'Rammstein frequently references German history, folklore, and social issues unfamiliar to me. This created gaps in understanding that went beyond language—I was missing the cultural literacy needed to interpret their work fully.',
+    description: 'Rammstein frequently references German history, folklore, and social issues unfamiliar to me. This created gaps in understanding that went beyond language, I was missing the cultural literacy needed to interpret their work fully.',
     tool: 'Cultural Research & Community Engagement',
     toolDescription: 'I began studying the band\'s history, interviews, artistic influences, and German cultural references. I also sought context from German speakers and fans who could provide insight that translations couldn\'t capture. This taught me that asking questions is a literacy skill.',
   },
@@ -127,7 +127,7 @@ export default function ConstraintsSection() {
           viewport={{ once: true }}
           className="text-center text-white/30 text-sm mt-16 italic"
         >
-          Content from Critical Literacy Narrative Three: Constraints and Tools
+          Critical Literacy Narrative Three: Constraints and Tools
         </motion.p>
       </div>
     </section>

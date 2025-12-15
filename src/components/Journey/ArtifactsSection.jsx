@@ -7,32 +7,32 @@ const sampleArtifacts = [
     id: 1,
     title: 'Berlin Concert Ticket',
     category: 'Origin Point',
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=80',
+    image: '/images/rammsteintickets.jpg',
     description: 'The physical concert ticket symbolizes the origin point of my literacy. It represents my first exposure to Rammstein not as a playlist recommendation or a random discovery on YouTube, but as a live cultural phenomenon.',
-    connection: 'In Berlin, the band\'s significance was shaped by context—history, language, and identity. This artifact connects directly to the idea that literacy is not only about skills but about environment and access. The concert ticket marks the moment I shifted from passive listener to active interpreter.'
+    connection: 'In Berlin, the band\'s significance was shaped by context, history, language, and identity. This artifact connects directly to the idea that literacy is not only about skills but about environment and access. The concert ticket marks the moment I shifted from passive listener to active interpreter.'
   },
   {
     id: 2,
     title: 'German Lyrics & Translation',
     category: 'Linguistic Challenge',
-    image: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=600&q=80',
+    image: '/images/duolingo.png',
     description: 'One of the biggest challenges came from trying to understand Rammstein\'s German lyrics. At first, I relied heavily on online translations, but quickly realized that literal translations often miss tone, cultural references, or intentional ambiguity.',
-    connection: 'This struggle helped me develop new tools for navigating unfamiliar texts. I learned to compare multiple translations, annotate lines that confused me, and research idioms or historical references. This artifact represents the linguistic dimension of my literacy—the point where I learned that music literacy is also language literacy.'
+    connection: 'This struggle helped me develop new tools for navigating unfamiliar texts. I learned to compare multiple translations, annotate lines that confused me, and research idioms or historical references. This artifact represents the linguistic dimension of my literacy, the point where I learned that music literacy is also language literacy.'
   },
   {
     id: 3,
     title: 'The Tomato Debate Video',
     category: 'Interpretive Framework',
-    image: 'https://images.unsplash.com/photo-1592921870789-04563d55041c?w=600&q=80',
-    description: 'Although humorous, the viral "Is a tomato a fruit or a vegetable?" video became a metaphor for interpretation disagreement. The debate is silly on the surface, but it illustrates a core truth about literacy: people construct meaning differently based on context, authority, and personal experience.',
+    image: '/images/tomato.jpg',
+    description: 'The tomato fruit or vegetable video became a metaphor for interpretation disagreement. The debate is silly on the surface, but it illustrates a core truth about literacy: people construct meaning differently based on context, authority, and personal experience.',
     connection: 'This artifact helped me realize that music is the same way. Some people classify Rammstein as noise; others see them as high art. Some interpret their imagery literally; others see layers of satire and commentary. This strengthened my understanding that literacy involves navigating multiple, often conflicting interpretations.'
   },
   {
     id: 4,
     title: 'Music Video Imagery',
     category: 'Multimodal Analysis',
-    image: 'https://images.unsplash.com/photo-1574173542753-15f7b0e30197?w=600&q=80',
-    description: 'Rammstein\'s music videos functioned as a major interpretive tool in my literacy development. Because I could not rely on lyrics alone, I turned to visuals—color palettes, symbolism, costumes, choreography, sound-image contrast, and emotional tone.',
+    image: '/images/rammsteinweimar.png',
+    description: 'Rammstein\'s music videos functioned as a major interpretive tool in my literacy development. Because I could not rely on lyrics alone, I turned to visuals, color palettes, symbolism, costumes, choreography, sound-image contrast, and emotional tone.',
     connection: 'Music videos allowed me to analyze storytelling without words and helped connect themes across multiple modes. This artifact highlights the multimodal nature of literacy. Understanding music is not just about listening; it involves reading images, understanding context, and recognizing artistic intention.'
   },
 ];

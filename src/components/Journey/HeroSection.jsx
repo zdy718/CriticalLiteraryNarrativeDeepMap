@@ -59,7 +59,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-12"
         >
-        A journey from spontaneous concert-goer to critical interpreter—
+        A journey from spontaneous concert-goer to critical interpreter
         exploring music as cultural communication through Rammstein and Berlin.
         </motion.p>
 
@@ -69,7 +69,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 1 }}
         className="text-white/60 text-sm tracking-wider"
         >
-        Fall 2024 • Unit Three Major Project
+        Fall 2025 • Major Project Three
         </motion.p>
       </div>
 

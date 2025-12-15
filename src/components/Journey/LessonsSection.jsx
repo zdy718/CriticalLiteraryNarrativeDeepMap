@@ -7,21 +7,21 @@ const lessons = [
     id: 1,
     number: '01',
     title: 'Interpretation Is Subjective',
-    description: 'Just as people argue about whether a tomato is a fruit or a vegetable, people interpret music differently. Meaning is constructed, not absolute. There is no single "correct" reading of a text—whether it\'s a song, a performance, or a piece of visual art.',
+    description: 'Just as people argue about whether a tomato is a fruit or a vegetable, people interpret music differently. Meaning is constructed, not absolute. There is no single "correct" reading of a text, whether it\'s a song, a performance, or a piece of visual art.',
     connection: 'This lesson fundamentally changed how I approach Rammstein\'s work. Rather than searching for the "right" interpretation, I now focus on building well-supported readings that acknowledge multiple perspectives. The tomato debate became my framework for understanding that classification systems and interpretive lenses shape what we see.',
   },
   {
     id: 2,
     number: '02',
     title: 'Literacy Is Multimodal',
-    description: 'Understanding music required reading language, visuals, sound, and cultural signals simultaneously. Texts don\'t exist in isolation—they combine words, images, sounds, gestures, and contexts to create meaning.',
-    connection: 'My inability to rely solely on lyrics forced me to develop multimodal literacy. I had to interpret tone, performance, visual symbolism, and audience reaction all at once. This taught me that literacy is never just about one mode of communication—it\'s about synthesizing multiple forms of meaning-making.',
+    description: 'Understanding music required reading language, visuals, sound, and cultural signals simultaneously. Texts don\'t exist in isolation, they combine words, images, sounds, gestures, and contexts to create meaning.',
+    connection: 'My inability to rely solely on lyrics forced me to develop multimodal literacy. I had to interpret tone, performance, visual symbolism, and audience reaction all at once. This taught me that literacy is never just about one mode of communication, it\'s about synthesizing multiple forms of meaning-making.',
   },
   {
     id: 3,
     number: '03',
     title: 'Constraints Encourage Growth',
-    description: 'My limitations—especially the language barrier—forced me to develop new strategies and approaches. Rather than being obstacles that stopped my learning, constraints became catalysts for deeper engagement.',
+    description: 'My limitations, especially the language barrier, forced me to develop new strategies and approaches. Rather than being obstacles that stopped my learning, constraints became catalysts for deeper engagement.',
     connection: 'Not understanding German pushed me to build interpretive tools I wouldn\'t have needed otherwise. Translation strategies, cultural research, visual analysis, and community engagement all emerged from navigating limitations. This reframed constraints as generative rather than purely restrictive.',
   },
   {
@@ -35,8 +35,8 @@ const lessons = [
     id: 5,
     number: '05',
     title: 'Art Always Communicates Something',
-    description: 'Even when misunderstood or controversial, art participates in ongoing conversations about identity, culture, and society. Texts are never neutral—they always make claims, take positions, and invite responses.',
-    connection: 'Rammstein\'s provocative imagery isn\'t random shock value—it\'s deliberate commentary on history, politics, and human behavior. Learning to ask "What is this trying to say?" and "What conversation is this part of?" helped me see music as rhetorical. Every artistic choice communicates intention, whether or not audiences agree with or understand it.',
+    description: 'Even when misunderstood or controversial, art participates in ongoing conversations about identity, culture, and society. Texts are never neutral, they always make claims, take positions, and invite responses.',
+    connection: 'Rammstein\'s provocative imagery isn\'t random shock value, it\'s deliberate commentary on history, politics, and human behavior. Learning to ask "What is this trying to say?" and "What conversation is this part of?" helped me see music as rhetorical. Every artistic choice communicates intention, whether or not audiences agree with or understand it.',
   },
 ];
 

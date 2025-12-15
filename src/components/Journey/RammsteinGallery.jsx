@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const galleryImages = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=800&q=80',
+    url: '/images/rammsteinfire.avif',
     caption: 'Rammstein Live Performance',
     description: 'Pyrotechnics and theatrical staging',
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
+    url: '/images/duhastfire.png',
     caption: 'Concert Atmosphere',
     description: 'The power of live music experience',
   },
