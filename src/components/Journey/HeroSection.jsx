@@ -42,7 +42,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-tight"
         >
-        Music Literacy
+        Zi Dane Yan
         <span className="block text-[#c9a227] italic font-serif">Deep Map</span>
         </motion.h1>
 
