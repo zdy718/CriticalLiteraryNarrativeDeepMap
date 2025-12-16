@@ -18,7 +18,7 @@ export default function AboutSection() {
             Introduction
           </p>
           <h2 className="text-3xl md:text-5xl font-light text-[#1a1a2e] mb-6">
-            Zi Dane Yan – Exploring Music Literacy
+            Exploring Music & Cultural Literacy
           </h2>
           <div className="w-16 h-px bg-[#1a1a2e]/20 mx-auto" />
         </motion.div>
