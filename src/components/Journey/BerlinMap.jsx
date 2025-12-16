@@ -54,7 +54,7 @@ const mapLocations = [
     x: 70,
     y: 48,
     category: 'Cultural Context',
-    image: 'https://images.unsplash.com/photo-1587893904933-0a7bb8107d87?w=800&q=80',
+    image: '/images/eastsidegallery.jpg',
     description: 'The remnants of the Berlin Wall covered in art. This helped me understand the historical context that shapes German identity and Rammstein\'s themes.',
     significance: 'Seeing how Germans engage with their complex history through art clarified why Rammstein\'s provocative imagery matters in cultural conversations.',
   },
