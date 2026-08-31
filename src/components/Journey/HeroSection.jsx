@@ -69,7 +69,6 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 1 }}
         className="text-white/60 text-sm tracking-wider"
         >
-        Fall 2025 • Major Project Three
         </motion.p>
       </div>
 
