@@ -137,7 +137,7 @@ export default function LessonsSection() {
               to interpret music critically and contextually. This literacy continues to grow as I explore 
               more German music, engage more deeply with cultural analysis, and apply critical literacy 
               concepts to other forms of art. The journey is ongoing, but its foundation is now strong, 
-              intentional, and informed by the tools and lessons I've developed throughout this course."
+              intentional, and informed by the tools and lessons I've developed throughout my life."
             </p>
             <div className="w-12 h-px bg-[#c9a227] mx-auto mt-8" />
           </div>
