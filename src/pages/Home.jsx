@@ -60,10 +60,9 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <p className="text-[#c9a227] text-sm tracking-[0.3em] uppercase mb-4">
-                Unit Three Major Project
               </p>
               <h2 className="text-2xl md:text-3xl font-light mb-6">
-                Critical Literacy Narrative Deep Map
+                Rammstein Deep Map
               </h2>
               <p className="text-gray-400 text-sm">
                 A journey through words, growth, and discovery
